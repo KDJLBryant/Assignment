@@ -23,6 +23,29 @@ String fmt(int number){
 
 
 void main(){
-
+  for(int hour = 23; hour >= 0; hour--){
+    for(int min = 59; min >= 0; min--){
+      for(int sec = 59; sec >= 0; sec--){
+        if(hour == 0 && min == 0 && sec <= 10){
+          switch(sec){
+            case 10:{print('TEN');}break;
+            case 9:{print('NINE');}break;
+            case 8:{print('EIGHT');}break;
+            case 7:{print('SEVEN');}break;
+            case 6:{print('SIX');}break;
+            case 5:{print('FIVE');}break;
+            case 4:{print('FOUR');}break;
+            case 3:{print('THREE');}break;
+            case 2:{print('TWO');}break;
+            case 1:{print('ONE');}break;
+            case 0:{print('HAPPY NEW YEAR!');}break;
+          }
+        }
+        else{
+          print('${fmt(hour)}:${fmt(min)}:${fmt(sec)}');
+        }
+      }
+    }
+  }
 
 }
